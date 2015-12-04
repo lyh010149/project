@@ -1,9 +1,14 @@
 <% provide(:title, 'Recipe') %>
-<!--begin of page-container-->
+
 <div class="topic align-center">
   <h1>Lovely Cooking</h1>
   <p>" When walking, walk; When eating, eat."</p>
 </div>
-<div class="row">
+<div class="row"> 
   <%= render 'recipes/catagory' %>
+  <div class="col-md-8"> 
+    <%= render 'recipes/block' %>
+  </div>
 </div>
+
+
