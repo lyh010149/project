@@ -1,0 +1,76 @@
+// Place all the styles related to the Recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+    /* catogory */
+    .topic h1{
+      color: #CD5C5C;
+    }
+    
+    .topic p{
+      color:#F0F8FF;
+      text-align:center;
+      font-family:courier;
+    }
+    .homepage-cats{
+      width:200px;
+      font-size:15px;
+      margin-top: 20px;
+      margin-left: 40px; 
+    }
+    .homepage-cats li{
+      position:relative;
+      margin-bottom:15px
+    }
+    .cat-name{
+      color:#922;
+      vertical-align:middle;
+      margin-left:15px
+    }
+
+    /* blocks */
+    .block1{margin-top:20px;}
+    .block2{margin-top:270px;}
+    .block3{
+      margin-top:230px;
+      .content{ 
+        height: 135px;
+        .recipe{margin:5px 0 5px 11px; width:102px; height:120px;
+          .name{padding: 20px;}
+        }
+      }
+    }
+
+    .title-bar{
+      position: absolute;
+      width: 580px;
+      height: 40px;
+      background-color: #F0F8FF;
+      .title{
+        margin-left:30px;
+        font-size: 25px;
+        font-family: courier;
+      }
+    }   
+    .content{
+      position: absolute;
+      margin: 40px 0 20px 0;
+      border: 3px solid #F0F8FF;
+      width: 580px;
+      height:200px;
+      .recipe {
+        margin:10px 0 10px 30px;
+        border: 1px solid #F0F8FF;
+        float: left;
+        width: 152px;
+        height: 171px;
+        .img{
+          width: 100%;
+        }
+        .img:hover {
+          border: 1px solid #777;
+        }
+        .name{
+          padding: 12px;
+        }
+      }
+    } 
