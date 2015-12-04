@@ -1,0 +1,27 @@
+// Place all the styles related to the Recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+    /* catogory */
+    .topic h1{
+      color: #CD5C5C;
+    }
+    
+    .topic p{
+      color:#F0F8FF;
+      text-align:center;
+      font-family:courier;
+    }
+    .homepage-cats{
+      width:200px;
+      margin-bottom:23px;
+      font-size:15px;
+    }
+    .homepage-cats li{
+      position:relative;
+      margin-bottom:15px
+    }
+    .cat-name{
+      color:#922;
+      vertical-align:middle;
+      margin-left:15px
+    }

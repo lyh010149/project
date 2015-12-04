@@ -4,6 +4,7 @@
 
     body {
       padding-top: 60px;
+      background-color:#FFE4E1;
     }
 
     section {
@@ -20,6 +21,7 @@
 
     .center h1 {
       margin-bottom: 10px;
+      color: #CD5C5C;
     }
 
     /* typography */
@@ -50,7 +52,14 @@
     }
 
     /* header */
-
+    
+    .navbar {
+      background-color: #FFA07A;
+    }
+    div1{
+      margin-top:13px;
+    }
+    
     #logo {
       float: left;
       margin-right: 10px;
