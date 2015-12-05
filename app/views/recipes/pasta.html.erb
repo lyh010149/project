@@ -1,0 +1,28 @@
+<% provide(:title, 'Pasta') %>
+<h1 class="head">Pasta:</h1>
+<div class="row" >
+	  <%= render 'recipes/catagory' %>
+	  <ul style="list-style-type:none">
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/FriedSauce.png", alt: "FreidSause"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Freid Sause Noodle", '#', class: "name" %>
+              <p>100g noodles, 1 egg, vegetable oil, 1 onion, 1 carrot and cucumber, 1/4 cup red bell pepper, soy sauce, minced.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/PastaSalad.png", alt: "PastaSalad"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Pasta Salad", '#', class: "name" %>
+              <p>1 package rotini pasta, 10 slices bacon, 1 tomato, cheese, mayonnaise, salad, 1/4 teaspoon garlic powder and pepper.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/Sausage.png", alt: "Sausage"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Sausage Pasta", '#', class: "name" %>
+              <p>3/4 pound pasta, 1 tablespoon olive oil, spicy Italian sausage, 1 onion, chicken broth, 1 package frozen chopped spinach.</p>
+            </span>
+        </li>
+      </ul>
+</div>

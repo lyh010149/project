@@ -1,0 +1,29 @@
+<% provide(:title, 'Lunch') %>
+<h1 class="head">Lunch:</h1>
+<div class="row" >
+	  <%= render 'recipes/catagory' %>
+	  <ul style="list-style-type:none">
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/CurryFriedRice.png", alt: "CurryFriedRice"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Curry Fried Rice", '#', class: "name" %>
+              <p>one bowl rice, vegetable oil, an egg, little onion, a carrot, soy sauce, salt.</p>
+            </span>
+        </li>
+
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/Dumpling.png", alt: "Dumpling"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Dumpling", '#', class: "name" %>
+              <p>plain powder, pork, some vegetables you like, soy sauce, salt, sugar, onion, vinegar, cooking wine.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/Casserole.png", alt: "Casserole"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Sausage Casserole", '#', class: "name" %>
+              <p>a carrot and cucumber, 1 onion, 1 garlic clove, 1 tsp paprika, 400g can chopped tomatoes, potatoes, curry sauce, 2 tbsp olive oil.</p>
+            </span>
+        </li>
+      </ul>
+</div>

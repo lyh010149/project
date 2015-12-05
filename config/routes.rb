@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   resources :users
   root 'static_pages#home'
 
-  get 'recipe'    => 'recipes#recipe'
   get 'about'   => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
   get 'signup'  => 'users#new'
@@ -11,9 +10,13 @@ Rails.application.routes.draw do
   post 'login'  => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
-  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  #recipe page
+  get 'recipe'    => 'recipes#recipe'
+  get 'breakfast' => 'recipes#breakfast'
+  get 'lunch' => 'recipes#lunch'
+  get 'pasta' => 'recipes#pasta'
+  get 'drink' => 'recipes#drink'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

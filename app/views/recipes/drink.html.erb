@@ -1,0 +1,28 @@
+<% provide(:title, 'Drink') %>
+<h1 class="head">Drink:</h1>
+<div class="row" >
+	  <%= render 'recipes/catagory' %>
+	  <ul style="list-style-type:none">
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/Eggnog.png", alt: "Eggnog"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Eggnog Russian", '#', class: "name" %>
+              <p>1/2 jigger spiced rum, 1 jigger coffee flavored liqueur, 3/4 cup eggnog, 1 pinch ground nutmeg.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/PeachDrink.png", alt: "PeachDrink"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Peach Drink", '#', class: "name" %>
+              <p>1 can peach nectar, 1/2 cups orange juice.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/MilkTea.png", alt: "MilkTea"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "MilkTea", '#', class: "name" %>
+              <p>Pan-fried chicken breast medallions get a light, fresh lemon-butter sauce with capers and parsley.</p>
+            </span>
+        </li>
+      </ul>
+</div>
