@@ -1,8 +1,8 @@
 <% provide(:title, 'Breakfast') %>
 <h1 class="head">Breakfast:</h1>
 <div class="row" >
-	  <%= render 'recipes/catagory' %>
-	  <ul style="list-style-type:none">
+    <%= render 'recipes/catagory' %>
+    <ul style="list-style-type:none">
         <li class="list-recipe" > 
            <%= link_to image_tag("list/BakedOatmeal.png", alt: "BakedOatmeal"), '#', class: "img" %>
             <span class="content">
@@ -10,6 +10,7 @@
               <p>2 eggs, 1/2 cup melted butter, 2 teaspoons vanilla extract, 3/4 cup dried cranberries.</p>
             </span>
         </li>
+
         <li class="list-recipe" > 
             <%= link_to image_tag("list/MilkTea.png", alt: "MilkTea"), '#', class: "img" %>
             <span class="content">
@@ -21,7 +22,7 @@
             <%= link_to image_tag("list/Sandwich.png", alt: "Sandwich"), '#', class: "img" %>
             <span class="content">
               <%= link_to "Sandwich", '#', class: "name" %>
-              <p>two peices of bread, half of a tomato, some cheese, an egg, black pepper.</p>
+              <p>two pieces of bread, half of a tomato, some cheese, an egg, black pepper.</p>
             </span>
         </li>
       </ul>

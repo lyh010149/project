@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+ 
   resources :users
   resources :microposts, only: [:create, :destroy] 
   root 'static_pages#home'
@@ -21,8 +21,18 @@ Rails.application.routes.draw do
   get 'newrecipe' => 'recipes#newrecipe'
   get 'freshmaterial' => 'recipes#freshmaterial'
   get 'eggnog' => 'recipes#eggnog'
+  
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :account_activations, only: [:edit]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
+  resources :microposts,          only: [:create, :destroy]
+  resources :relationships,       only: [:create, :destroy]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
