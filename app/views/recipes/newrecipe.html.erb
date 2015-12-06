@@ -1,0 +1,37 @@
+<% provide(:title, 'Newrecipe') %>
+<h1 class="head">New Recipes:</h1>
+<%= link_to "Popular Recipes", '#', class: "toplink" %>
+<%= link_to "Fresh Materials", freshmaterial_path, class: "toplink" %>
+<div class="row" >
+	  <%= render 'recipes/catagory' %>
+	  <ul style="list-style-type:none">
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/LemonChi.png", alt: "LemonChicken"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Lemon Chicken Piccata", '#', class: "name" %>
+              <p>1 lemon, 1 chicken, salt, sugar, soy sauce, oil, coriander.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/Eggnog.png", alt: "Eggnog"), eggnog_path, class: "img" %>
+            <span class="content">
+              <%= link_to "Eggnog Russian", eggnog_path, class: "name" %>
+              <p>1/2 jigger spiced rum, 1 jigger coffee flavored liqueur, 3/4 cup eggnog, 1 pinch ground nutmeg.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/Casserole.png", alt: "Casserole"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Sausage Casserole", '#', class: "name" %>
+              <p>a carrot and cucumber, 1 onion, 1 garlic clove, 1 tsp paprika, 400g can chopped tomatoes, potatoes, curry sauce, 2 tbsp olive oil.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/Sausage.png", alt: "Sausage"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Sausage Pasta", '#', class: "name" %>
+              <p>3/4 pound pasta, 1 tablespoon olive oil, spicy Italian sausage, 1 onion, chicken broth, 1 package frozen chopped spinach.</p>
+            </span>
+        </li>
+      </ul>
+</div>

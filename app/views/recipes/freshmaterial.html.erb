@@ -1,0 +1,37 @@
+<% provide(:title, 'Freshmaterial') %>
+<h1 class="head">Fresh Materials:</h1>
+<%= link_to "New Recipes", newrecipe_path, class: "toplink" %>
+<%= link_to "Popular Recipes", '#', class: "toplink" %>
+<div class="row" >
+	  <%= render 'recipes/catagory' %>
+	  <ul style="list-style-type:none">
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/Sandwich.png", alt: "Sandwich"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Sandwich", '#', class: "name" %>
+              <p>two peices of bread, half of a tomato, some cheese, an egg, black pepper.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/CurryFriedRice.png", alt: "CurryFriedRice"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Curry Fried Rice", '#', class: "name" %>
+              <p>one bowl rice, vegetable oil, an egg, little onion, a carrot, soy sauce, salt.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/PastaSalad.png", alt: "PastaSalad"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Pasta Salad", '#', class: "name" %>
+              <p>1 package rotini pasta, 10 slices bacon, 1 tomato, cheese, mayonnaise, salad, 1/4 teaspoon garlic powder and pepper.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/Eggnog.png", alt: "Eggnog"), eggnog_path, class: "img" %>
+            <span class="content">
+              <%= link_to "Eggnog Russian", eggnog_path, class: "name" %>
+              <p>1/2 jigger spiced rum, 1 jigger coffee flavored liqueur, 3/4 cup eggnog, 1 pinch ground nutmeg.</p>
+            </span>
+        </li>
+      </ul>
+</div>
