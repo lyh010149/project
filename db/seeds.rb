@@ -1,27 +1,22 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
-# Examples:
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar")
+# Users table
+User.create(name:"liyihan00", email:"116055096800@qq.com", password:"000000", password_confirmation:"000000")
+User.create(name:"liyihan01", email:"116055096801@qq.com", password:"010101", password_confirmation:"010101")
+User.create(name:"liyihan02", email:"116055096802@qq.com", password:"020202", password_confirmation:"020202")
 
-99.times do |n|
-  name  = Faker::Name.name
-  email = "example-#{n+1}@railstutorial.org"
-  password = "password"
-  User.create!(name:  name,
-               email: email,
-               password:              password,
-               password_confirmation: password)
-end
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+#Micropost table
+user = User.find(1)
+user.microposts.create(content:"This is Icecream!", picture:"IceCream.png")
+user = User.find(2)
+user.microposts.create(content:"This is Apple Chip!", picture:"AppleChip.png")
+user = User.find(3)
+user.microposts.create(content:"This is Mushroom Soup!", picture:"MushroomSoup.png")
+
 # Following relationships
-users = User.all
-user  = users.first
-following = users[2..50]
-followers = users[3..40]
-following.each { |followed| user.follow(followed) }
-followers.each { |follower| follower.follow(user) }
+Relationship.create(follower_id:"2", followed_id:"1")
+Relationship.create(follower_id:"3", followed_id:"1")
+Relationship.create(follower_id:"1", followed_id:"2")
+Relationship.create(follower_id:"1", followed_id:"3")
