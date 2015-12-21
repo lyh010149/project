@@ -6,9 +6,9 @@
 	  <%= render 'recipes/catagory' %>
 	  <ul style="list-style-type:none">
         <li class="list-recipe" > 
-            <%= link_to image_tag("list/LemonChi.png", alt: "LemonChicken"), '#', class: "img" %>
+            <%= link_to image_tag("list/LemonChi.png", alt: "LemonChicken"), lemonchi_path, class: "img" %>
             <span class="content">
-              <%= link_to "Lemon Chicken Piccata", '#', class: "name" %>
+              <%= link_to "Lemon Chicken Piccata", lemonchi_path, class: "name" %>
               <p>1 lemon, 1 chicken, salt, sugar, soy sauce, oil, coriander.</p>
             </span>
         </li>
@@ -20,9 +20,9 @@
             </span>
         </li>
         <li class="list-recipe" > 
-            <%= link_to image_tag("list/Casserole.png", alt: "Casserole"), '#', class: "img" %>
+            <%= link_to image_tag("list/Casserole.png", alt: "Casserole"), casserole_path, class: "img" %>
             <span class="content">
-              <%= link_to "Sausage Casserole", '#', class: "name" %>
+              <%= link_to "Sausage Casserole", casserole_path, class: "name" %>
               <p>a carrot and cucumber, 1 onion, 1 garlic clove, 1 tsp paprika, 400g can chopped tomatoes, potatoes, curry sauce, 2 tbsp olive oil.</p>
             </span>
         </li>

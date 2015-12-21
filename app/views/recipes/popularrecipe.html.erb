@@ -1,0 +1,37 @@
+<% provide(:title, 'Popularrecipe') %>
+<h1 class="head">Popular Recipes:</h1>
+<%= link_to "New Recipes", newrecipe_path, class: "toplink" %>
+<%= link_to "Fresh Materials", freshmaterial_path, class: "toplink" %>
+<div class="row" >
+	  <%= render 'recipes/catagory' %>
+	  <ul style="list-style-type:none">
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/Sausage.png", alt: "Sausage"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Sausage Pasta", '#', class: "name" %>
+              <p>3/4 pound pasta, 1 tablespoon olive oil, spicy Italian sausage, 1 onion, chicken broth, 1 package frozen chopped spinach.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/ApplePie.png", alt: "ApplePie"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Apple Pie", '#', class: "name" %>
+              <p>some apples, sugar, tablespoons all-purpose flour, teaspoon ground cinnamon, salt, ground nutmeg, lemon juice.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/BeefStew.png", alt: "BeefStew"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Beef Stew", '#', class: "name" %>
+              <p>beef, carrot, popato, tomato, oil, onion, salt.</p>
+            </span>
+        </li>
+        <li class="list-recipe" > 
+            <%= link_to image_tag("list/Dumpling.png", alt: "Dumpling"), '#', class: "img" %>
+            <span class="content">
+              <%= link_to "Dumpling", '#', class: "name" %>
+              <p>plain powder, pork, some vegetables you like, soy sauce, salt, sugar, onion, vinegar, cooking wine.</p>
+            </span>
+        </li>
+      </ul>
+</div>

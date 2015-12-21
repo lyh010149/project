@@ -4,23 +4,23 @@
    	</div>
    	<div class="content">
    	  <div class="recipe">
-      	<%= link_to image_tag("block/LemonChi.png", alt: "LemonChiken"), '#' ,class: "img" %>
-        <%= link_to "LemonChicken", '#', class: "name" %>
+      	<%= link_to image_tag("block/LemonChi.png", alt: "LemonChiken"),lemonchi_path ,class: "img" %>
+        <%= link_to "LemonChicken", lemonchi_path, class: "name" %>
       </div>
       <div class="recipe">
       	<%= link_to image_tag("block/Eggnog.png", alt: "EggnogRussian"), eggnog_path ,class: "img" %>
         <%= link_to "Eggnog Russian", eggnog_path, class: "name" %>
       </div>
       <div class="recipe">
-      	<%= link_to image_tag("block/Casserole.png", alt: "SausageCasserole"), '#' ,class: "img" %>
-        <%= link_to "Sausage Casserole", '#', class: "name" %>
+      	<%= link_to image_tag("block/Casserole.png", alt: "SausageCasserole"), casserole_path ,class: "img" %>
+        <%= link_to "Sausage Casserole", casserole_path, class: "name" %>
       </div>
    	</div>
 </li>
 
 <li class="block2" style="list-style-type:none">
     <div class="title-bar">
-      <%= link_to "Popular Recipes:", '#', class: "title" %> 
+      <%= link_to "Popular Recipes:", popularrecipe_path, class: "title" %> 
    	</div>
    	<div class="content">
       <div class="recipe">

@@ -19,9 +19,11 @@ Rails.application.routes.draw do
   get 'pasta' => 'recipes#pasta'
   get 'drink' => 'recipes#drink'
   get 'newrecipe' => 'recipes#newrecipe'
+  get 'popularrecipe' => 'recipes#popularrecipe'
   get 'freshmaterial' => 'recipes#freshmaterial'
   get 'eggnog' => 'recipes#eggnog'
-  
+  get 'lemonchi' => 'recipes#lemonchi'
+  get 'casserole' => 'recipes#casserole'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   resources :users do
