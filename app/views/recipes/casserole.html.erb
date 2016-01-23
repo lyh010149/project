@@ -3,7 +3,7 @@
   <%= render 'recipes/catagory' %>
   <ul class="detail", style="list-style-type:none">
   	<h3>A sausage casserole is a whole meal you can make in one pan – so there's lots of flavour in the dish and very little washing up.</h3>
-    <li><img src="/assets/list/Casserole.png", alt="Casserole" /></li>
+    <li><%= image_tag("list/Casserole.png", alt: "Casserole") %></li>
     <li><%= link_to "Collect", '#', class: "collect" %></li>
     <h3>Step:</h3>
     <li class="step">1. Cut the potatoes and carrots and turn the oven to 180°C.</br>2. Prick the sausages all over with a fork. </br>3. Add the chopped onion to the casserole and continue to cook over a low heat for 5-10 minutes.</br>4. Add the chopped potatoes and carrots and stir everything around in the casserole.</br>5. Using your oven gloves, carefully put the casserole into the oven. Cook for 45 minutes.</li>

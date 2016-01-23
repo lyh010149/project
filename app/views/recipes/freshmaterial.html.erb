@@ -1,7 +1,7 @@
 <% provide(:title, 'Freshmaterial') %>
 <h1 class="head">Fresh Materials:</h1>
 <%= link_to "New Recipes", newrecipe_path, class: "toplink" %>
-<%= link_to "Popular Recipes", '#', class: "toplink" %>
+<%= link_to "Popular Recipes", popularrecipe_path, class: "toplink" %>
 <div class="row" >
 	  <%= render 'recipes/catagory' %>
 	  <ul style="list-style-type:none">

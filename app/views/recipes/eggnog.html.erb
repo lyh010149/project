@@ -3,7 +3,7 @@
   <%= render 'recipes/catagory' %>
   <ul class="detail", style="list-style-type:none">
   	<h3>A holiday version of a white Russian cocktail.</h3>
-    <li><img src="/assets/list/Eggnog.png", alt="Eggnog" /></li>
+    <li><%= image_tag("list/Eggnog.png", alt: "Eggnog") %></li>
     <li><%= link_to "Collect", '#', class: "collect" %></li>
     <h3>Step:</h3>
     <li class="step">1. Stir together eggnog, vodka, and coffee liqueur in a large pitcher or punch bowl.</br>2. Add ice. </br>3. When eggnog is very cold, remove unmelted ice. </br>4. Serve eggnog garnished with nutmeg and cinnamon sticks.</li>
