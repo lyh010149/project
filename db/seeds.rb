@@ -5,7 +5,7 @@
 User.create(name:'liyihan00', email:'116055096800@qq.com', password:"000000", password_confirmation:"000000")
 User.create(name:'liyihan01', email:'116055096801@qq.com', password:"010101", password_confirmation:"010101")
 User.create(name:'liyihan02', email:'116055096802@qq.com', password:"020202", password_confirmation:"020202")
-User.create(name:'liyihan03', email:'116055096803@qq.com', password:"030303", password_confirmation:"030303")
+User.create(name:'liyihan03', email:'116055096803@qq.com', password:"030303", password_confirmation:"030303", admin: true)
 
 
 #Micropost table
