@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
  
   resources :users
-  resources :microposts, only: [:create, :destroy] 
+  resources :microposts, only: [:create, :destroy, :index] do
+      resources :comments
+  end
   root 'static_pages#home'
 
   get 'about'   => 'static_pages#about'

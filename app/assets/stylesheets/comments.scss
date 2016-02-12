@@ -1,0 +1,39 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* comments */
+  .micropost {
+    margin-left: 330px;
+    margin-top:40px;
+    .time{
+       margin-left:60px;
+    }
+  }
+
+  .com_input{
+    .com_text{
+       width: 700px;
+       height: 100px;
+       margin-left:235px;
+    }
+    .button{
+       width: 100px;
+       height: 40px;
+       margin-left:835px;
+       background-color: #FFA07A;
+       color: white;
+    }
+  }
+
+  .com_list{
+    li{
+      padding: 10px 0;
+      border-top: 1px solid #B0C4DE;
+    }
+    margin-top:30px;
+    margin-left:200px;
+    margin-right:200px;
+  }
+
+  

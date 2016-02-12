@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
     /* universal */
 
     body {
@@ -17,6 +18,8 @@
 
     .center {
       text-align: center;
+      background-image: url(home1.png);
+      height:400px;
     }
 
     .center h1 {
@@ -43,7 +46,7 @@
       margin-bottom: 30px;
       text-align: center;
       font-weight: normal;
-      color: #777;
+      color:#8B4513;
     }
 
     p {
@@ -55,6 +58,7 @@
     
     .navbar {
       background-color: #FFA07A;
+      height:15px;
     }
     div1{
       margin-top:13px;
@@ -228,3 +232,8 @@
       }
     }
     
+    .btn{
+       background-color: #FFA07A;
+       color: white;
+       border-color: #FFA07A;
+      }

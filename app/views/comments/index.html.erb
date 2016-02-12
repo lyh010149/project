@@ -1,0 +1,21 @@
+<h1 class="userhead">Comments</h1>
+	<div class="micropost">
+	    <%= link_to gravatar_for(@user, size: 50), @user %>
+		<%= link_to @user.name, @user %><br />
+		<%= @micropost.content %><br />
+		<%= image_tag @micropost.picture.url if @micropost.picture? %><br />
+		<p class="time">Shared <%= time_ago_in_words(@micropost.created_at) %> ago</p>
+	</div><br /><br />
+
+	<div class="com_input">
+		<%= form_for(@comment,url: micropost_comments_path(@micropost)) do |f|%>
+		    <%= f.text_area :content, class: "com_text" %>
+        	<%= f.submit "comment", class: "button" %>
+    	<% end %>
+	</div>
+
+	<div class="com_list">
+		<ol>
+			<%= render @comments %>
+		</ol>
+	</div>

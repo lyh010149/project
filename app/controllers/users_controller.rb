@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def new
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     @user = User.new(secure_params)
     if @user.save
       remember @user
-      flash[:success] = "Welcome to the Twitter App!"
+      flash[:success] = "Welcome to my Recipe Website!"
       redirect_to @user
     else
       render 'new'
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "Account updated"
       redirect_to @user
     else
       render 'edit'

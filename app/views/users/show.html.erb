@@ -15,9 +15,11 @@
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
       <h3>My Shared Recipes (<%= @user.microposts.count %>)</h3>
+      <%= will_paginate @microposts %>
       <ol class="microposts">
         <%= render @microposts %>
       </ol>
+      <%= will_paginate @microposts %>
     <% end %>
   </div>
 </div>

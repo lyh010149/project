@@ -1,11 +1,10 @@
 class MicropostsController < ApplicationController
 	before_action :logged_in_user, only: [:create, :destroy]
-	before_action :correct_user,   only: :destroy
   def create
     	secure_post = params.require(:micropost).permit(:content, :picture)
       @micropost = current_user.microposts.build(secure_post) 
       if @micropost.save
-        flash[:success] = "Micropost created!"
+        flash[:success] = "Recipe created!"
         redirect_to root_url
       else
           @feed_items = []
@@ -14,6 +13,7 @@ class MicropostsController < ApplicationController
   end
     	
 	def destroy
+    @micropost=Micropost.find(params[:id])
     @micropost.destroy
     redirect_to root_url
   end
