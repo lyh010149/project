@@ -1,4 +1,4 @@
-<h1 class="userhead">Comments</h1>
+<h4>Comments</h4>
 	<div class="micropost">
 	    <%= link_to gravatar_for(@user, size: 50), @user %>
 		<%= link_to @user.name, @user %><br />
@@ -16,6 +16,7 @@
 
 	<div class="com_list">
 		<ol>
+			<h3><%= @comments.count %><%= @comments.count <= 1 ?  ' comment' : ' comments:' %></h3>
 			<%= render @comments %>
 		</ol>
 	</div>

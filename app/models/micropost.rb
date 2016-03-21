@@ -15,4 +15,9 @@ class Micropost < ActiveRecord::Base
         errors.add(:picture, "should be less than 5MB")
       end
     end
+
+    def self.search(query)
+    # where(:title, query) -> This would return an exact match of the query
+    where("content like ?", "%#{query}%") 
+  end
 end

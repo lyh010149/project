@@ -1,0 +1,8 @@
+<% provide(:title, 'All microposts') %>
+<h4>Microposts</h4>
+<h3 class="search"><%= @microposts.count %><%= @microposts.count <= 1 ? ' searching result' : ' searching results' %> </h3>
+<ul class="microposts">
+  <%= render @microposts %>
+</ul>
+
+

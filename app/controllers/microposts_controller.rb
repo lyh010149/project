@@ -1,5 +1,15 @@
 class MicropostsController < ApplicationController
-	before_action :logged_in_user, only: [:create, :destroy]
+	before_action :logged_in_user, only: [:create, :destroy, :index]
+
+  def index
+    
+    if params[:search]
+      @microposts = current_user.feed.search(params[:search]).order("created_at DESC")
+    else
+      @microposts = Micropost.order("created_at DESC")
+    end
+  end
+
   def create
     	secure_post = params.require(:micropost).permit(:content, :picture)
       @micropost = current_user.microposts.build(secure_post) 

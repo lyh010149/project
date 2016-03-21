@@ -1,16 +1,16 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <%= link_to "MONICA RECIPE", root_path, id: "logo" %>
-
-    <%= form_tag("/search", method: "get") do %>
+    
+    <%= form_tag(microposts_path, :method => "get") do %>
         <div1 class="col-lg-2 pull-center input_checkbox input search_header">
-          <%= text_field_tag(:q) %>
+          <%= text_field_tag :search, params[:search] %>
         </div1>
         <div1 class="button pull-left">
               <%= submit_tag("Search") %>
         </div1> 
     <% end %>
-    
+
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home",   root_path %></li>
