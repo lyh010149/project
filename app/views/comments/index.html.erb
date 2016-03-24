@@ -2,8 +2,9 @@
 	<div class="micropost">
 	    <%= link_to gravatar_for(@user, size: 50), @user %>
 		<%= link_to @user.name, @user %><br />
-		<%= @micropost.content %><br />
-		<%= image_tag @micropost.picture.url if @micropost.picture? %><br />
+		<p class="recipename"><%= @micropost.name %> :</p>
+		<p class="time"><%= @micropost.content %></p>
+		<p class="time"><%= image_tag @micropost.picture.url if @micropost.picture? %></p>
 		<p class="time">Shared <%= time_ago_in_words(@micropost.created_at) %> ago</p>
 	</div><br /><br />
 

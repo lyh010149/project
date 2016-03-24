@@ -209,13 +209,26 @@
     
     /* forms */
 
-    input, textarea, select, .uneditable-input {
+     input, select, .uneditable-input {
       border: 1px solid #bbb;
       width: 100%;
       margin-bottom: 15px;
       @include box_sizing;
     }
 
+    .name_text{
+      border: 1px solid #bbb;
+      width: 100%;
+      margin-top: 0px;
+      height: 40px;
+    }
+
+    .content_text{
+      border: 1px solid #bbb;
+      width: 100%;
+      margin: 10px 0 10px 0;
+      height: 200px;
+    }
     input {
       height: auto !important;
     }

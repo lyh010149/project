@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :microposts, dependent: :destroy
+  has_many :collections, foreign_key: "collecter_id",
+                         dependent:   :destroy
+  has_many :collecting, through: :collections, source: :collected                    
   has_many :active_relationships, class_name:  "Relationship",
                                   foreign_key: "follower_id",
                                   dependent:   :destroy
@@ -70,5 +73,17 @@ class User < ActiveRecord::Base
     # Returns true if the current user is following the other user.
     def following?(other_user)
       following.include?(other_user)
+    end
+
+    def collect(micropost)
+      collections.create(collected_id: micropost.id)
+    end
+
+    def uncollect(micropost)
+      collections.find_by(collected_id: micropost.id).destroy
+    end
+
+    def collecting?(micropost)
+      collecting.include?(micropost)
     end
 end

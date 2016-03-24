@@ -1,0 +1,21 @@
+  <% provide(:title, @micropost.name) %>
+  <div class="micropost">
+  <p class="recipename"><%= @micropost.name %></p>
+  <p><%= link_to image_tag(@micropost.picture.url), @micropost %></p>
+  <p><%= @micropost.content %></p>
+  <p>Shared <%= time_ago_in_words(@micropost.created_at) %> ago.</p>
+    
+  <%= link_to "comment", micropost_comments_path(@micropost),class: "btn-sm btn-info" %>
+    <div class="collect_form">
+      <% if current_user.collecting?(@micropost) %>
+        <%= form_for(current_user.collections.find_by(collected_id: @micropost.id), html: { method: :delete }) do |f| %>
+          <%= f.submit "uncollect", class: "btn-sm btn-success disabled" %>
+        <% end %>
+      <% else %>
+        <%= form_for(current_user.collections.build) do |f| %>
+          <div><%= hidden_field_tag :collected_id, @micropost.id %></div>
+          <%= f.submit "Collect", class: "btn-sm btn-success active" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>

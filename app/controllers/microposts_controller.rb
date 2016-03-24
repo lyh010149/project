@@ -1,17 +1,21 @@
 class MicropostsController < ApplicationController
 	before_action :logged_in_user, only: [:create, :destroy, :index]
-
+  
   def index
-    
+    @micropost  = current_user.microposts.build
     if params[:search]
       @microposts = current_user.feed.search(params[:search]).order("created_at DESC")
     else
       @microposts = Micropost.order("created_at DESC")
     end
   end
+  
+  def show
+    @micropost = Micropost.find(params[:id])
+  end
 
   def create
-    	secure_post = params.require(:micropost).permit(:content, :picture)
+    	secure_post = params.require(:micropost).permit(:name, :content, :picture)
       @micropost = current_user.microposts.build(secure_post) 
       if @micropost.save
         flash[:success] = "Recipe created!"
@@ -31,7 +35,7 @@ class MicropostsController < ApplicationController
   # NEW PRIVATE METHOD
   private
     def micropost_params
-      params.require(:micropost).permit(:content, :picture)
+      params.require(:micropost).permit(:name, :content, :picture)
     end
     
     def correct_user

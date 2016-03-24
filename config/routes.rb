@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- 
+
   resources :users
   resources :microposts, only: [:create, :destroy, :index] do
       resources :comments
@@ -30,13 +30,20 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   resources :users do
     member do
-      get :following, :followers
+      get :following, :followers, :collecting
+    end
+  end
+
+  resources :microposts do
+    member do
+      get :collecters
     end
   end
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
+  resources :collections,         only: [:create, :destroy]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

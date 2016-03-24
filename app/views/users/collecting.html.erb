@@ -1,0 +1,13 @@
+<h4>Favorite Recipes</h4>
+<% if @microposts.empty? %>
+  <h3> You favorite is empty! <%= link_to "Add now!", root_path %></h3> 
+<% else %>
+  <h3 class="search"><%= @microposts.count %>
+  <%= @microposts.count <= 1 ? ' collection result' : ' collection results' %>
+  <%= link_to "Add More", root_path, class: "btn-sm btn-success" %>
+  </h3>
+
+  <ul class="microposts">
+    <%= render @microposts %> 
+  </ul>
+<% end %>

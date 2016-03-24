@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy,
-                                        :following, :followers]
+                                        :following, :followers, :collecting]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
   def index
@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
+    @micropost  = current_user.microposts.build
   end
 
   def new
@@ -62,7 +63,12 @@ class UsersController < ApplicationController
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'
   end
-
+  
+  def collecting
+    @user = User.find(params[:id])
+    @microposts = @user.collecting.paginate(page: params[:page])
+  end
+    
   private
 
     def user_params

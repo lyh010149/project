@@ -10,11 +10,11 @@ User.create(name:'liyihan03', email:'116055096803@qq.com', password:"030303", pa
 
 #Micropost table
 user = User.find(1)
-user.microposts.create(content:"This is Icecream!")
+user.microposts.create(name:"Icecream", content:"ice, cream, suger")
 user = User.find(2)
-user.microposts.create(content:"This is Apple Chip!")
+user.microposts.create(name:"Apple Chip", content:"apple, tomato sause!")
 user = User.find(3)
-user.microposts.create(content:"This is Mushroom Soup!")
+user.microposts.create(name:"Mushroom Soup", content:"mushroom, oil, onion, butter, salt, suger, flour")
 
 #relationship table
 user1 = User.find(1)

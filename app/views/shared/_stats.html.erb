@@ -12,4 +12,10 @@
     </strong>
     followers
   </a>
+  <a href="<%= collecting_user_path(@user) %>">
+    <strong id="collecting" class="stat">
+      <%= @user.collecting.count %>
+    </strong>
+    favorites
+  </a>
 </div>
